@@ -1,12 +1,12 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: hello-kube
+  name: hello-kube-service
   labels:
-    app: hello-kube
+    app: hello-kube-deployment
 spec:
   selector:
-    app: hello-kube
+    app: hello-kube-pod
   ports:
     - port: 80
       name: http

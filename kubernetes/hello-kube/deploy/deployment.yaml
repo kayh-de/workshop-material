@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-kube
-  labels:
-    app: hello-kube
+  name: hello-kube-deployment
 spec:
-  replicas: 1
+  replicas: 10
   selector:
     matchLabels:
-      app: hello-kube
+      app: hello-kube-pod
   template:
     metadata:
       labels:
-        app: hello-kube
+        app: hello-kube-pod
     spec:
       containers:
         - name: web
           image: learncloudnative/hello-kube:0.1.0
           ports:
             - containerPort: 3000
+  
+    
